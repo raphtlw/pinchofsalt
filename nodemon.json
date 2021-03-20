@@ -1,0 +1,4 @@
+{
+  "ignore": ["public/"],
+  "ext": "js,ts,html,css,md,png,svg"
+}

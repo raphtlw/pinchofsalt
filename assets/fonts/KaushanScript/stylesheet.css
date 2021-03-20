@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url('KaushanScript-Regular.woff2') format('woff2'),
+        url('KaushanScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
