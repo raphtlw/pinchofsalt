@@ -61,6 +61,12 @@ p {
   filter: invert(1);
 }
 
+.catalog a {
+  @apply text-base;
+  @apply font-normal;
+  @apply underline;
+}
+
 .navigation a {
   @apply text-base;
   @apply font-normal;
