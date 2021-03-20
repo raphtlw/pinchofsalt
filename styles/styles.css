@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL STYLES */
+
+body {
+  @apply flex;
+  @apply flex-col;
+
+  background-color: #fffcf9;
+}
+
+h1 {
+  @apply text-3xl;
+  @apply font-bold;
+
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  @apply text-2xl;
+  @apply font-bold;
+
+  letter-spacing: -0.5px;
+}
+
+p {
+  @apply text-base;
+  @apply font-normal;
+
+  letter-spacing: -0.2px;
+}
+
+/* APPLIED ONCE */
+
+.navbar {
+  @apply flex;
+  @apply flex-row;
+  @apply bg-white;
+  @apply bg-opacity-80;
+  @apply sticky;
+  @apply top-0;
+  @apply h-20;
+
+  backdrop-filter: blur(16px);
+}
+
+.footer {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply bg-gray-800;
+  @apply text-white;
+}
+.footer .logo img {
+  filter: invert(1);
+}
+
+.navigation a {
+  @apply text-base;
+  @apply font-normal;
+  @apply underline;
+}
+
+.browse-recipes-btn {
+  @apply rounded-lg;
+  @apply bg-gray-800;
+  @apply text-white;
+  @apply w-min;
+  @apply whitespace-nowrap;
+  @apply px-6;
+  @apply py-2;
+  @apply flex;
+  @apply flex-row;
+  @apply space-x-3;
+  @apply font-cursive;
+  @apply font-normal;
+  @apply text-lg;
+  @apply items-center;
+  @apply ml-10;
+  @apply mt-14;
+}
+
+.view-on-github-btn {
+  @apply rounded-lg;
+  @apply text-black;
+  @apply w-min;
+  @apply whitespace-nowrap;
+  @apply flex;
+  @apply flex-row;
+  @apply space-x-3;
+  @apply font-sans;
+  @apply font-normal;
+  @apply text-base;
+  @apply items-center;
+  @apply ml-16;
+  @apply mt-6;
+  @apply underline;
+}
+
+.contribute-btn {
+  @apply rounded-md;
+  @apply text-black;
+  @apply w-min;
+  @apply whitespace-nowrap;
+  @apply flex;
+  @apply flex-row;
+  @apply space-x-2;
+  @apply font-sans;
+  @apply font-normal;
+  @apply text-xs;
+  @apply items-center;
+  @apply px-3;
+  @apply py-2;
+  @apply mt-8;
+
+  background-color: #fffcf9;
+}

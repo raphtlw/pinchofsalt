@@ -1,1 +1,0 @@
-A Pinch of Salt is an open source recipe website that's designed to be easy, minimal and open. The website contains absolutely NO JavaScript, so there are no trackers, ads, or fancy stuff. Loading speed is almost instant, and recipes are layed out nicely and effectively.
