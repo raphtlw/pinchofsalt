@@ -4,6 +4,10 @@
 
 /* GLOBAL STYLES */
 
+* {
+  -webkit-tap-highlight-color: rgba(128, 128, 128, 0.2);
+}
+
 body {
   @apply flex;
   @apply flex-col;

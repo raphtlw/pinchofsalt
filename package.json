@@ -2,12 +2,14 @@
   "scripts": {
     "dev": "concurrently \"postcss styles/styles.css -o styles/_styles.css -w\" \"browser-sync start --server --no-open --watch\""
   },
-  "dependencies": {
+  "devDependencies": {
+    "@types/shelljs": "^0.8.8",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "concurrently": "^6.0.0",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
+    "shelljs": "^0.8.4",
     "tailwindcss": "^2.0.4"
   }
 }
