@@ -35,7 +35,7 @@ async function main() {
     `postcss ${path.join(dirs.STYLES, "styles.css")} -o ${path.join(
       dirs.DST,
       "styles",
-      "_styles.css"
+      "styles.css"
     )}`,
     (err, stdout, stderr) => {
       if (err) throw err
