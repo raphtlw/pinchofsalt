@@ -3,6 +3,8 @@ import fs from "fs-extra"
 import path from "path"
 import { dirs } from "./values"
 import cp from "child_process"
+import marked from "marked"
+import glob from "glob"
 
 type TemplateData = {
   [key: string]: any
@@ -66,6 +68,7 @@ async function main() {
   for (const filename of fs.readdirSync(dirs.SRC)) {
     if (filename.endsWith(".html") || filename.endsWith(".htm")) {
       const srcPath = path.join(dirs.SRC, filename)
+
       buildHTML(srcPath, templateData).then((html) => {
         fs.writeFile(path.join(dirs.DST, filename), html)
           .then(() => {
@@ -76,6 +79,28 @@ async function main() {
           })
       })
     }
+  }
+
+  // special cases
+  const templatePath = path.join(dirs.RECIPES, "template.html")
+  const template = fs.readFileSync(templatePath).toString()
+  fs.copySync(dirs.RECIPES, path.join(dirs.DST, "recipes"))
+  for (const filePath of glob.sync(path.join(dirs.RECIPES, "**", "*.md"))) {
+    const markdownContents = fs.readFileSync(filePath).toString()
+    const htmlContents = marked(markdownContents)
+    const newFileContents = template.replace("<!--CONTENT-->", htmlContents)
+
+    const htmlFilePath = path.join(
+      dirs.DST,
+      "recipes",
+      `${path.basename(filePath, ".md")}.html`
+    )
+
+    fs.writeFileSync(htmlFilePath, newFileContents)
+
+    const finalHTML = await buildHTML(htmlFilePath, templateData)
+    fs.writeFileSync(htmlFilePath, finalHTML)
+    console.log(`${htmlFilePath} built.`)
   }
 }
 

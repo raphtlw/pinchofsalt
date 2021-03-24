@@ -16,4 +16,7 @@ export const dirs = {
   get STYLES() {
     return path.join(this.SRC, "styles")
   },
+  get RECIPES() {
+    return path.join(this.SRC, "recipes")
+  },
 }
