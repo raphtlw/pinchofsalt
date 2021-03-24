@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+
+    {{{ components.stylesheets }}}
+
+    <style>
+      main {
+        margin: 0 2rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+      h1 {
+        margin-bottom: 2rem;
+      }
+      .category {
+        margin-top: 0.8rem;
+      }
+      .category ul {
+        margin-top: 0.5rem;
+      }
+      .category li a {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    {{{ components.navbar }}}
+
+    <main>
+      <h1>Catalog</h1>
+
+      <div class="category">
+        <h2>Italian</h2>
+        <ul>
+          <li>
+            <a href="/recipes/lasagna-flatbread/index.html"
+              >Lasagna Flatbread</a
+            >
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    {{{ components.footer }}}
+  </body>
+</html>

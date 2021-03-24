@@ -5,13 +5,13 @@ import { dirs } from "./values"
 import cp from "child_process"
 import marked from "marked"
 import glob from "glob"
+import fm from "front-matter"
 
 type TemplateData = {
   [key: string]: any
 }
 
-async function buildHTML(srcPath: string, data: TemplateData) {
-  const source = fs.readFileSync(srcPath).toString()
+async function buildHTML(source: string, data: TemplateData) {
   const template = Handlebars.compile(source)
   const output = template(data)
 
@@ -65,20 +65,20 @@ async function main() {
   templateData.components = componentData
 
   // generate html from templates
-  for (const filename of fs.readdirSync(dirs.SRC)) {
-    if (filename.endsWith(".html") || filename.endsWith(".htm")) {
-      const srcPath = path.join(dirs.SRC, filename)
+  for (const filePath of glob.sync(path.join(dirs.SRC, "**", "*.html"), {
+    ignore: [path.join(dirs.COMPONENTS, "**", "*")],
+  })) {
+    const fileContent = fs.readFileSync(filePath).toString()
 
-      buildHTML(srcPath, templateData).then((html) => {
-        fs.writeFile(path.join(dirs.DST, filename), html)
-          .then(() => {
-            console.log(`${filename} built.`)
-          })
-          .catch((e) => {
-            if (e) throw e
-          })
-      })
-    }
+    buildHTML(fileContent, templateData).then((html) => {
+      fs.writeFile(filePath.replace("src", "dist"), html)
+        .then(() => {
+          console.log(`${filePath} built.`)
+        })
+        .catch((e) => {
+          if (e) throw e
+        })
+    })
   }
 
   // special cases
@@ -86,21 +86,18 @@ async function main() {
   const template = fs.readFileSync(templatePath).toString()
   fs.copySync(dirs.RECIPES, path.join(dirs.DST, "recipes"))
   for (const filePath of glob.sync(path.join(dirs.RECIPES, "**", "*.md"))) {
-    const markdownContents = fs.readFileSync(filePath).toString()
-    const htmlContents = marked(markdownContents)
-    const newFileContents = template.replace("<!--CONTENT-->", htmlContents)
+    const fileContents = fs.readFileSync(filePath).toString()
+    const contents = fm(fileContents)
+    const htmlContents = marked(contents.body)
+    const newFileContents = template
+      .replace("<!--CONTENT-->", htmlContents)
+      .replace("<!--TITLE-->", contents.attributes["title"])
 
-    const htmlFilePath = path.join(
-      dirs.DST,
-      "recipes",
-      `${path.basename(filePath, ".md")}.html`
-    )
+    const outFilePath = filePath.replace("src", "dist").replace(".md", ".html")
 
-    fs.writeFileSync(htmlFilePath, newFileContents)
-
-    const finalHTML = await buildHTML(htmlFilePath, templateData)
-    fs.writeFileSync(htmlFilePath, finalHTML)
-    console.log(`${htmlFilePath} built.`)
+    const finalHTML = await buildHTML(newFileContents, templateData)
+    fs.writeFileSync(outFilePath, finalHTML)
+    console.log(`${filePath} built.`)
   }
 }
 
