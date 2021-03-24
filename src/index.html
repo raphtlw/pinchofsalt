@@ -11,20 +11,7 @@
     <link rel="stylesheet" href="/fonts/index.css" />
   </head>
   <body>
-    <header class="navbar">
-      <a href="/" class="inline-flex">
-        <div class="flex flex-row items-center">
-          <img src="/images/logo.svg" alt="logo" class="h-8 mr-3 ml-5" /><span
-            class="inline-block text-base font-normal font-cursive"
-            >Pinch of Salt</span
-          >
-        </div></a
-      >
-      <div class="flex flex-grow"></div>
-      <a href="/nav.html" class="w-6 mr-5 inline-flex"
-        ><img src="/images/hamburger.svg" alt="Hamburger"
-      /></a>
-    </header>
+    {{{ components.navbar }}}
 
     <section class="flex flex-col mt-20">
       <h1 class="px-8">A free and open recipe website</h1>
@@ -68,34 +55,6 @@
       </p>
     </section>
 
-    <footer class="footer">
-      <div class="flex flex-row items-center logo mt-8">
-        <img src="/images/logo.svg" alt="logo" class="h-8 mr-3 ml-5" /><span
-          class="inline-block text-base font-normal font-cursive"
-          >Pinch of Salt</span
-        >
-      </div>
-      <p class="text-sm px-16 text-center mt-8">
-        This site was made possible because of the community - Including you.
-      </p>
-      <a href="/contribute.html" class="contribute-btn">
-        <span>Contribute</span>
-        <svg
-          class="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-          />
-        </svg>
-      </a>
-      <p class="text-xs mt-8 mb-10">&copy; raphtlw All Rights Reserved.</p>
-    </footer>
+    {{{ components.footer }}}
   </body>
 </html>
