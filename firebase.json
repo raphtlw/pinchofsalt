@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "pinchofsalt",
+    "public": "dist/",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
