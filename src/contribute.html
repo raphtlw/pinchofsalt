@@ -8,9 +8,109 @@
     <title>Contribute</title>
 
     {{{ components.stylesheets }}}
+
+    <style>
+      .section {
+        margin-top: 1.5rem;
+      }
+      .section .inner {
+        margin-top: 0.6rem;
+      }
+    </style>
   </head>
   <body>
     {{{ components.navbar }}}
+
+    <main class="mx-8 mt-16 mb-12">
+      <h1 class="mb-8">Contributing</h1>
+
+      <p>
+        Contributions are most welcome. If you would like to contribute, feel
+        free to submit a pull request or open a new issue on the project over on
+        <a href="https://github.com/raphtlw/pinchofsalt" class="underline"
+          >Github</a
+        >.
+      </p>
+      <p class="mt-2">
+        However, if you would like to contribute recipes, please read the
+        information below.
+      </p>
+
+      <div class="section">
+        <h2>Contributing recipes</h2>
+        <div class="inner">
+          <p>
+            If you have an awesome recipe and would like to share it with the
+            world, you can do so by following the instructions below.
+          </p>
+          <p>
+            Recipes are stored at
+            <a
+              href="https://github.com/raphtlw/pinchofsalt/tree/main/src/recipes"
+              target="_blank"
+              class="underline"
+              >/src/recipes</a
+            >. To contribute recipes, you can either do it via 2 ways. If you do
+            not know how to use git or Github, you should do it the first way.
+          </p>
+          <div class="inner">
+            <h3>First method (EASIER)</h3>
+            <p>
+              You can just send an email over to me with the recipe at
+              <a href="mailto:raphpb1912@gmail.com">raphpb1912@gmail.com</a>.
+            </p>
+          </div>
+          <div class="inner">
+            <h3>Second method</h3>
+            <p>
+              If you have experience with using git and Github, just fork the
+              repository, make your changes to the relevant directory, and make
+              a pull request on the project
+              <a href="https://github.com/raphtlw/pinchofsalt/pulls">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Directory structure</h2>
+        <div class="inner">
+          <ul>
+            <li>
+              /generator - The static site generator for the source files.
+            </li>
+            <li>
+              /src - The source files that the generator uses to build the files
+            </li>
+            <li>/src/assets - Static assets like images and fonts</li>
+            <li>/src/components - Reusable HTML templates</li>
+            <li>/src/recipes - The recipes</li>
+            <li>/src/styles - Stylesheets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Notes</h2>
+        <div class="inner">
+          <h3>Generator</h3>
+          <p>Output files are located at /dist</p>
+        </div>
+        <div class="inner">
+          <h3>Recipes</h3>
+          <p>
+            Recipes are written in Markdown format, a simple and easy text
+            format. You can learn more about markdown
+            <a
+              href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+              target="_blank"
+              class="underline"
+              >here</a
+            >.
+          </p>
+        </div>
+      </div>
+    </main>
 
     {{{ components.footer }}}
   </body>
