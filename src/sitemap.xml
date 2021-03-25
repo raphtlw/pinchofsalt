@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://pinchofsalt.web.app/</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/nav.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/recipes/index.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/contribute.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/recipes/garlicky-lamb-chops/index.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/recipes/baked-feta-pasta/index.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pinchofsalt.web.app/recipes/honey-garlic-glazed-salmon/index.html</loc>
+  <lastmod>2021-03-25T14:36:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
