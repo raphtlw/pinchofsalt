@@ -23,7 +23,7 @@ Many recipe websites are filled with ads, trackers, and popups. This project aim
 
 ## Directory structure
 
-Recipes are located in [/src/recipes](./src/recipes) and all the source html files are located in [/src]. For more information about the directory or file structure, see the [contributing](https://pinchofsalt.web.app/contribute.html) docs.
+Recipes are located in [/src/recipes](./src/recipes) and all the source html files are located in [/src](./src/). For more information about the directory or file structure, see the [contributing](https://pinchofsalt.web.app/contribute.html) docs.
 
 ## Contributing
 
