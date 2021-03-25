@@ -21,14 +21,31 @@ export const dirs = {
   },
 }
 
+type RecipeItem = {
+  name: string
+  path: string
+}
+type RecipeCatalogItem = {
+  category: string
+  recipes: RecipeItem[]
+}
+
 // Recipe catalog
-export const recipeCatalog = [
+export const recipeCatalog: RecipeCatalogItem[] = [
   {
     category: "Easy to cook",
     recipes: [
       {
         name: "Garlicky Lamb Chops",
         path: "/recipes/garlicky-lamb-chops/index.html",
+      },
+      {
+        name: "Baked Feta Pasta",
+        path: "/recipes/baked-feta-pasta/index.html",
+      },
+      {
+        name: "Honey Garlic Glazed Salmon",
+        path: "/recipes/honey-garlic-glazed-salmon/index.html",
       },
     ],
   },
