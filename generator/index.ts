@@ -1,7 +1,7 @@
 import Handlebars from "handlebars"
 import fs from "fs-extra"
 import path from "path"
-import { dirs } from "./values"
+import { dirs, recipeCatalog } from "./values"
 import cp from "child_process"
 import marked from "marked"
 import glob from "glob"
@@ -55,6 +55,10 @@ async function main() {
   // also get all the data that is used to fill up the html templates
   let templateData: TemplateData = {}
 
+  // recipes
+  templateData.recipes = recipeCatalog
+
+  // components
   const componentData = {}
   for (const filename of fs.readdirSync(dirs.COMPONENTS)) {
     const componentCode = fs
@@ -92,6 +96,7 @@ async function main() {
     const newFileContents = template
       .replace("<!--CONTENT-->", htmlContents)
       .replace("<!--TITLE-->", contents.attributes["title"])
+      .replace("<!--PREVIEW_IMAGE-->", contents.attributes["preview"])
 
     const outFilePath = filePath.replace("src", "dist").replace(".md", ".html")
 

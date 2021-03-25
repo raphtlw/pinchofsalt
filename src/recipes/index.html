@@ -34,16 +34,18 @@
     <main>
       <h1>Catalog</h1>
 
+      {{#each recipes}}
       <div class="category">
-        <h2>Italian</h2>
+        <h2>{{this.category}}</h2>
         <ul>
+          {{#each this.recipes}}
           <li>
-            <a href="/recipes/lasagna-flatbread/index.html"
-              >Lasagna Flatbread</a
-            >
+            <a href="{{this.path}}">{{this.name}}</a>
           </li>
+          {{/each}}
         </ul>
       </div>
+      {{/each}}
     </main>
 
     {{{ components.footer }}}

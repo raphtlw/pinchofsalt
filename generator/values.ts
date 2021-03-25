@@ -20,3 +20,16 @@ export const dirs = {
     return path.join(this.SRC, "recipes")
   },
 }
+
+// Recipe catalog
+export const recipeCatalog = [
+  {
+    category: "Easy to cook",
+    recipes: [
+      {
+        name: "Garlicky Lamb Chops",
+        path: "/recipes/garlicky-lamb-chops/index.html",
+      },
+    ],
+  },
+]

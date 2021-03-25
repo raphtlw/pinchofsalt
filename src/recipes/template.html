@@ -8,11 +8,27 @@
     <title><!--TITLE--></title>
 
     {{{ components.stylesheets }}}
+
+    <style>
+      * {
+        list-style-type: disc;
+        list-style-position: inside;
+      }
+      h1 {
+        margin-bottom: 0.8rem;
+      }
+      h2 {
+        margin-top: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+    </style>
   </head>
   <body>
     {{{ components.navbar }}}
 
-    <main class="px-8 mt-10 mb-6">
+    <img src="<!--PREVIEW_IMAGE-->" alt="Preview" />
+
+    <main class="mt-12 mb-6 px-8">
       <!--CONTENT-->
     </main>
 

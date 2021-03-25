@@ -113,6 +113,45 @@
               >here</a
             >.
           </p>
+          <p>
+            When a new recipe is added, the catalog needs to be modified too.
+            So, after creating a folder in the recipes directory with a rough
+            but representative name of the recipe, create a file named
+            "index.md". All the recipe content goes in that file. Assets go in
+            the same folder too, so if you need to place any images for the
+            recipe, just put them in the same folder as the recipe.
+          </p>
+          <p>
+            After you are done, you need to update the catalog with the new
+            recipe that you have added. Recipe names and paths are specified in
+            the static site generator's code, located in
+            <a
+              href="https://github.com/raphtlw/pinchofsalt/tree/main/generator/values.ts"
+              target="_blank"
+              class="underline"
+              >/generator/values.ts</a
+            >.
+          </p>
+          <p class="mt-4">
+            The following code is an example of how the new recipe should be
+            added to the catalog:
+          </p>
+          <code>
+            <pre class="bg-gray-200 p-4 mt-4 rounded-lg overflow-x-scroll">
+export const recipeCatalog = [
+  {
+    category: "Easy to cook",                             -- Category goes here
+    recipes: [
+      {                                                   -- A new record is an object {}
+        name: "Garlicky Lamb Chops",                      -- Name of the recipe
+        path: "/recipes/garlicky-lamb-chops/index.html",  -- Where the recipe is located, with the name ending in index.html
+                                                             Because the static site generator converts the file from markdown (.md) to html (.html).
+      },
+    ],
+  }
+]
+            </pre>
+          </code>
         </div>
       </div>
     </main>
