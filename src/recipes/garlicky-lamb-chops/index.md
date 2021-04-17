@@ -1,6 +1,8 @@
 ---
 title: Garlicky Lamb Chops
 preview: ./preview.jpg
+category: Quick & Easy
+dirname: garlicky-lamb-chops
 ---
 
 # Garlicky Lamb Chops

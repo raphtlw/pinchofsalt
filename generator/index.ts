@@ -1,7 +1,7 @@
 import Handlebars from "handlebars"
 import fs from "fs-extra"
 import path from "path"
-import { dirs, recipeCatalog } from "./values"
+import { dirs } from "./values"
 import cp from "child_process"
 import marked from "marked"
 import glob from "glob"
@@ -56,6 +56,32 @@ async function main() {
   let templateData: TemplateData = {}
 
   // recipes
+  const recipeCatalog = []
+  for (const filePath of glob.sync(path.join(dirs.RECIPES, "**", "*.md"))) {
+    const fileContents = fs.readFileSync(filePath).toString()
+    const contents = fm(fileContents)
+    const recipeCategoryIndex = recipeCatalog.findIndex(
+      (e) => e.category === contents.attributes["category"]
+    )
+    const recipePath = `/recipes/${contents.attributes["dirname"]}/index.html`
+    if (recipeCategoryIndex !== -1) {
+      recipeCatalog[recipeCategoryIndex].recipes.push({
+        name: contents.attributes["title"],
+        path: recipePath,
+      })
+    } else {
+      recipeCatalog.push({
+        category: contents.attributes["category"],
+        recipes: [
+          {
+            name: contents.attributes["title"],
+            path: recipePath,
+          },
+        ],
+      })
+    }
+  }
+
   templateData.recipes = recipeCatalog
 
   // components

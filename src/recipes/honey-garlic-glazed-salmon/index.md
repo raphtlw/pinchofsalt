@@ -1,6 +1,8 @@
 ---
 title: Honey Garlic Glazed Salmon
 preview: ./preview.jpg
+category: Fish
+dirname: honey-garlic-glazed-salmon
 ---
 
 # Honey Garlic Glazed Salmon

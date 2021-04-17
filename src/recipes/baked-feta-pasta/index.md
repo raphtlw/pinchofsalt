@@ -1,6 +1,8 @@
 ---
 title: Baked Feta Pasta
 preview: ./preview.jpg
+category: Pastas
+dirname: baked-feta-pasta
 ---
 
 # Baked Feta Pasta

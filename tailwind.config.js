@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", "sans-serif"],
       cursive: ["'Kaushan Script'"],
+      mono: ["Fira Code", "monospace"],
     },
     extend: {},
   },
