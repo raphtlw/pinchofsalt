@@ -7,7 +7,7 @@
 
 <p align='center'>
   <a href='https://example.com'>
-    <img src='https://img.shields.io/badge/status-indev-blue?style=for-the-badge' height='25'>
+    <img src='https://img.shields.io/badge/status-prod-blue?style=for-the-badge' height='25'>
   </a>
   <a href='https://example.com'>
     <img src='https://img.shields.io/badge/build-success-blue?style=for-the-badge' height='25'>
