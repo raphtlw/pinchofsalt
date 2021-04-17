@@ -34,8 +34,8 @@
         >.
       </p>
       <p class="mt-2">
-        However, if you would like to contribute recipes, please read the
-        information below.
+        Anyone can contribute a recipe. If you would like to contribute recipes,
+        please read the information below.
       </p>
 
       <div class="section">
@@ -123,35 +123,25 @@
             the same folder too, so if you need to place any images for the
             recipe, just put them in the same folder as the recipe.
           </p>
-          <p>
-            After you are done, you need to update the catalog with the new
-            recipe that you have added. Recipe names and paths are specified in
-            the static site generator's code, located in
-            <a
-              href="https://github.com/raphtlw/pinchofsalt/tree/main/generator/values.ts"
-              target="_blank"
-              class="underline"
-              >/generator/values.ts</a
-            >.
-          </p>
-          <p class="mt-4">
-            The following code is an example of how the new recipe should be
-            added to the catalog:
-          </p>
+          <p>A recipe has to be submitted in the following format:</p>
           <code>
-            <pre class="bg-gray-200 p-4 mt-4 rounded-lg overflow-x-scroll">
-export const recipeCatalog = [
-  {
-    category: "Easy to cook",                             -- Category goes here
-    recipes: [
-      {                                                   -- A new record is an object {}
-        name: "Garlicky Lamb Chops",                      -- Name of the recipe
-        path: "/recipes/garlicky-lamb-chops/index.html",  -- Where the recipe is located, with the name ending in index.html
-                                                             Because the static site generator converts the file from markdown (.md) to html (.html).
-      },
-    ],
-  }
-]
+            <pre class="bg-gray-200 p-4 mt-4 rounded-lg overflow-x-auto">
+              ---
+              title: (The name of the recipe)
+              category: (The category or type of recipe)
+              preview: (The path to the image that is shown before the recipe)
+              dirname: (The name of the folder of the recipe that you are adding)
+              ---
+
+              # ( The name of the recipe )
+              
+              ## Ingredients
+
+              ( Your ingredients here )
+
+              ## Directions
+
+              ( The instructions for the recipe )
             </pre>
           </code>
         </div>

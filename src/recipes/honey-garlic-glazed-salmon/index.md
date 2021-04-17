@@ -22,6 +22,8 @@ Searing fish might seem intimidating, but once you get the hang of it, it'll be 
 - 3 cloves garlic, minced
 - 1 lemon, sliced into rounds
 
+## Directions
+
 1. In a medium bowl, whisk together honey, soy sauce, lemon juice and red pepper flakes.
 2. In a large skillet over medium-high heat, heat two tablespoons oil. When oil is hot but not smoking, add salmon skin-side up and season with salt and pepper. Cook salmon until deeply golden, about 6 minutes, then flip over and add remaining tablespoon of oil.
 3. Add garlic to the skillet and cook until fragrant, 1 minute. Add the honey mixture and sliced lemons and cook until sauce is reduced by about 1/3. Baste salmon with the sauce.
